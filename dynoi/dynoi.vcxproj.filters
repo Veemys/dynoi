@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{1cc00d10-3c7f-4de1-b035-7b8eea087b69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\events">
+      <UniqueIdentifier>{3f09344c-ff82-4f5f-9f61-5116fc4295fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\common">
+      <UniqueIdentifier>{6a3660a8-9f4b-42b8-9633-db4c80ec1a35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\kernel">
+      <UniqueIdentifier>{6c873635-d39f-4034-8f0d-e9859ff7c39c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\mathem">
+      <UniqueIdentifier>{2b77ddb7-7712-4ca9-9e19-42f0c7bdba18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\inout">
+      <UniqueIdentifier>{c0c3b2d1-5c4e-4024-9000-a47844ed7bc0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\generators">
+      <UniqueIdentifier>{842823a1-1aa9-426b-8ff1-3141aee1dba8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Cell.cpp">
+      <Filter>src\kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Boundary.cpp">
+      <Filter>src\kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DiagramHandler.cpp">
+      <Filter>src\kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Edge.cpp">
+      <Filter>src\kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Generator.cpp">
+      <Filter>src\kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Site.cpp">
+      <Filter>src\kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vector2D.cpp">
+      <Filter>src\kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vertex.cpp">
+      <Filter>src\kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VoronoiDiagram.cpp">
+      <Filter>src\kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Math.cpp">
+      <Filter>src\mathem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Triangle.cpp">
+      <Filter>src\mathem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FileReader.cpp">
+      <Filter>src\inout</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FileWriter.cpp">
+      <Filter>src\inout</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SimpleWriter.cpp">
+      <Filter>src\inout</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DegenerateHexaDiagramGenerationAlgorithm.cpp">
+      <Filter>src\generators</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FortuneGenerationAlgorithm.cpp">
+      <Filter>src\generators</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IncrementalGenerationAlgorithm.cpp">
+      <Filter>src\generators</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NaiveGenerationAlgorithm.cpp">
+      <Filter>src\generators</Filter>
+    </ClCompile>
+    <ClCompile Include="src\generators\DegenerateHexaDiagramGenerationAlgorithm.cpp">
+      <Filter>src\generators</Filter>
+    </ClCompile>
+    <ClCompile Include="src\generators\NaiveGenerationAlgorithm.cpp">
+      <Filter>src\generators</Filter>
+    </ClCompile>
+    <ClCompile Include="src\generators\IncrementalGenerationAlgorithm.cpp">
+      <Filter>src\generators</Filter>
+    </ClCompile>
+    <ClCompile Include="src\generators\FortuneGenerationAlgorithm.cpp">
+      <Filter>src\generators</Filter>
+    </ClCompile>
+    <ClCompile Include="src\inout\FileReader.cpp">
+      <Filter>src\inout</Filter>
+    </ClCompile>
+    <ClCompile Include="src\inout\FileWriter.cpp">
+      <Filter>src\inout</Filter>
+    </ClCompile>
+    <ClCompile Include="src\inout\SimpleWriter.cpp">
+      <Filter>src\inout</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mathem\Math.cpp">
+      <Filter>src\mathem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mathem\Triangle.cpp">
+      <Filter>src\mathem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\kernel\Boundary.cpp">
+      <Filter>src\kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\kernel\Cell.cpp">
+      <Filter>src\kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\kernel\DiagramHandler.cpp">
+      <Filter>src\kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\kernel\Edge.cpp">
+      <Filter>src\kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\kernel\Generator.cpp">
+      <Filter>src\kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\kernel\Site.cpp">
+      <Filter>src\kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\kernel\Vector2D.cpp">
+      <Filter>src\kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\kernel\Vertex.cpp">
+      <Filter>src\kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="src\kernel\VoronoiDiagram.cpp">
+      <Filter>src\kernel</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\events\EventHandler.h">
+      <Filter>src\events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\events\Event.h">
+      <Filter>src\events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\events\MethodEventHandler.h">
+      <Filter>src\events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\Singleton.h">
+      <Filter>src\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Cell.h">
+      <Filter>src\kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Boundary.h">
+      <Filter>src\kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DiagramHandler.h">
+      <Filter>src\kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Edge.h">
+      <Filter>src\kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GenerationAlgorithm.h">
+      <Filter>src\kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Generator.h">
+      <Filter>src\kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Site.h">
+      <Filter>src\kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vector2D.h">
+      <Filter>src\kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vertex.h">
+      <Filter>src\kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VoronoiDiagram.h">
+      <Filter>src\kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Figure.h">
+      <Filter>src\mathem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Math.h">
+      <Filter>src\mathem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Triangle.h">
+      <Filter>src\mathem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FileReader.h">
+      <Filter>src\inout</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FileWriter.h">
+      <Filter>src\inout</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Reader.h">
+      <Filter>src\inout</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SimpleWriter.h">
+      <Filter>src\inout</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Writer.h">
+      <Filter>src\inout</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DegenerateHexaDiagramGenerationAlgorithm.h">
+      <Filter>src\generators</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FortuneGenerationAlgorithm.h">
+      <Filter>src\generators</Filter>
+    </ClInclude>
+    <ClInclude Include="src\IncrementalGenerationAlgorithm.h">
+      <Filter>src\generators</Filter>
+    </ClInclude>
+    <ClInclude Include="src\NaiveGenerationAlgorithm.h">
+      <Filter>src\generators</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\Extension.h">
+      <Filter>src\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\generators\DegenerateHexaDiagramGenerationAlgorithm.h">
+      <Filter>src\generators</Filter>
+    </ClInclude>
+    <ClInclude Include="src\generators\NaiveGenerationAlgorithm.h">
+      <Filter>src\generators</Filter>
+    </ClInclude>
+    <ClInclude Include="src\generators\FortuneGenerationAlgorithm.h">
+      <Filter>src\generators</Filter>
+    </ClInclude>
+    <ClInclude Include="src\generators\IncrementalGenerationAlgorithm.h">
+      <Filter>src\generators</Filter>
+    </ClInclude>
+    <ClInclude Include="src\inout\FileReader.h">
+      <Filter>src\inout</Filter>
+    </ClInclude>
+    <ClInclude Include="src\inout\FileWriter.h">
+      <Filter>src\inout</Filter>
+    </ClInclude>
+    <ClInclude Include="src\inout\Reader.h">
+      <Filter>src\inout</Filter>
+    </ClInclude>
+    <ClInclude Include="src\inout\SimpleWriter.h">
+      <Filter>src\inout</Filter>
+    </ClInclude>
+    <ClInclude Include="src\inout\Writer.h">
+      <Filter>src\inout</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mathem\Figure.h">
+      <Filter>src\mathem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mathem\Math.h">
+      <Filter>src\mathem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mathem\Triangle.h">
+      <Filter>src\mathem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\kernel\Boundary.h">
+      <Filter>src\kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\kernel\Cell.h">
+      <Filter>src\kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\kernel\DiagramHandler.h">
+      <Filter>src\kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\kernel\Edge.h">
+      <Filter>src\kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\kernel\GenerationAlgorithm.h">
+      <Filter>src\kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\kernel\Generator.h">
+      <Filter>src\kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\kernel\Site.h">
+      <Filter>src\kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\kernel\Vector2D.h">
+      <Filter>src\kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\kernel\Vertex.h">
+      <Filter>src\kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="src\kernel\VoronoiDiagram.h">
+      <Filter>src\kernel</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
