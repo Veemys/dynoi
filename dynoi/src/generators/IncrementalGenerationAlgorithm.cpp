@@ -88,8 +88,12 @@ std::pair<std::shared_ptr<Edge>, std::pair<std::shared_ptr<Edge>, std::shared_pt
     std::shared_ptr<Vertex> end = nullptr;
     
     std::multimap<double, std::pair<std::shared_ptr<Edge>, Vector2D>> fucking;
+    std::set<std::shared_ptr<Edge>> deletedEdges;
     for (auto& edge : nextCell->edges())
     {
+        if (deletedEdges.contains(edge))
+            continue;
+
         const double newStraightElongationFactor = 1000.0;
         std::pair<Vector2D, Vector2D> newEdgeStraight =
             std::make_pair(center + newStraightElongationFactor * edgeDirection, center - newStraightElongationFactor * edgeDirection);
@@ -120,6 +124,7 @@ std::pair<std::shared_ptr<Edge>, std::pair<std::shared_ptr<Edge>, std::shared_pt
                 if (Math::pointsLayFromOneSide(shouldBeProcessedEdge->center(), newCell->site().coord(), newEdgeStraight))
                 {
                     nextCell->eraseEdge(shouldBeProcessedEdge);
+                    deletedEdges.insert(shouldBeProcessedEdge);
                     newCell->addEdge(shouldBeProcessedEdge);
                     if (shouldBeProcessedEdge->getParentCells().first == nextCell)
                     {
@@ -157,6 +162,7 @@ std::pair<std::shared_ptr<Edge>, std::pair<std::shared_ptr<Edge>, std::shared_pt
                 if (Math::pointsLayFromOneSide(shouldBeProcessedEdge->center(), newCell->site().coord(), newEdgeStraight))
                 {
                     nextCell->eraseEdge(shouldBeProcessedEdge);
+                    deletedEdges.insert(shouldBeProcessedEdge);
                     newCell->addEdge(shouldBeProcessedEdge);
                     if (shouldBeProcessedEdge->getParentCells().first == nextCell)
                     {
@@ -196,6 +202,20 @@ std::pair<std::shared_ptr<Edge>, std::pair<std::shared_ptr<Edge>, std::shared_pt
         }
 
         ++fuckingIter;
+        if ((fuckingIter == fucking.end()) && end == nullptr)
+        {
+            --fuckingIter;
+            endEdge = fuckingIter->second.first;
+            if (intersectedOldEdgesToNewVerticesLinks_.contains(endEdge))
+            {
+                end = intersectedOldEdgesToNewVerticesLinks_.at(endEdge);
+            }
+            else
+            {
+                end = std::make_shared<Vertex>(fuckingIter->second.second);
+                intersectedOldEdgesToNewVerticesLinks_.emplace(endEdge, end);
+            }
+        }
         if (fuckingIter != fucking.end())
         {
             if (end == nullptr)
