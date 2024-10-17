@@ -90,7 +90,9 @@ std::pair<std::shared_ptr<Edge>, std::pair<std::shared_ptr<Edge>, std::shared_pt
     std::multimap<double, std::pair<std::shared_ptr<Edge>, Vector2D>> fucking;
     for (auto& edge : nextCell->edges())
     {
-        std::pair<Vector2D, Vector2D> newEdgeStraight = std::make_pair(center + 1000.0 * edgeDirection, center - 1000.0 * edgeDirection);
+        const double newStraightElongationFactor = 1000.0;
+        std::pair<Vector2D, Vector2D> newEdgeStraight =
+            std::make_pair(center + newStraightElongationFactor * edgeDirection, center - newStraightElongationFactor * edgeDirection);
         std::pair<Vector2D, Vector2D> currentEdgeStraight = std::make_pair(edge->start(), edge->end());
         Vector2D straightIntersection = Math::straightsIntersection(newEdgeStraight, currentEdgeStraight);
 
