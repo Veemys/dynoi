@@ -26,12 +26,12 @@ void Vector2D::operator=(const Vector2D& other)
 	y_ = other.y_;
 }
 
-double Vector2D::x() const
+const double& Vector2D::x() const
 {
 	return x_;
 }
 
-double Vector2D::y() const
+const double& Vector2D::y() const
 {
 	return y_;
 }
@@ -46,12 +46,12 @@ double& Vector2D::y()
 	return y_;
 }
 
-double Vector2D::length()
+double Vector2D::length() const
 {
 	return std::sqrt(x_ * x_ + y_ * y_);
 }
 
-Vector2D Vector2D::getNorm()
+Vector2D Vector2D::getNorm() const
 {
 	return Vector2D(x_ / length(), y_ / length());
 }
@@ -63,7 +63,7 @@ void Vector2D::normalize()
 	y_ /= l;
 }
 
-Vector2D Vector2D::getReverse()
+Vector2D Vector2D::getReverse() const
 {
 	return (*this) * -1;
 }

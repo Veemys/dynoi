@@ -14,8 +14,8 @@ public:
 
 	~Vector2D() {}
 
-	double x() const;
-	double y() const;
+	const double& x() const;
+	const double& y() const;
 
 	double& x();
 	double& y();
@@ -27,10 +27,10 @@ public:
 	friend Vector2D operator*(const double a, const Vector2D& v);
 	friend Vector2D operator/(const Vector2D& v, const double a);
 
-	double length();
-	Vector2D getNorm();
+	double length() const;
+	Vector2D getNorm() const;
 	void normalize();
-	Vector2D getReverse();
+	Vector2D getReverse() const;
 	void reverse();
 
 };

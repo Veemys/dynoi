@@ -46,15 +46,12 @@ void processPointsFromFile(const std::string& points, Container& cont)
 		if (points[i] == ' ')
 		{
 			currentPoint.x() = std::stod(currentString);
-
 			currentString = "";
 		}
 		else if (points[i] == '\n')
 		{
 			currentPoint.y() = std::stod(currentString);
-
 			cont.push_back(currentPoint);
-
 			currentString = "";
 			currentPoint = Vector2D();
 		}
