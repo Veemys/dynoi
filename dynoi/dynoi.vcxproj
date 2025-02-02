@@ -129,6 +129,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\common\Extension.cpp" />
+    <ClCompile Include="src\common\PathHandler.cpp" />
     <ClCompile Include="src\debug\DebugOutput.cpp" />
     <ClCompile Include="src\generators\DegenerateHexaDiagramGenerationAlgorithm.cpp" />
     <ClCompile Include="src\generators\FortuneGenerationAlgorithm.cpp" />
@@ -136,7 +138,6 @@
     <ClCompile Include="src\generators\NaiveGenerationAlgorithm.cpp" />
     <ClCompile Include="src\inout\FileReader.cpp" />
     <ClCompile Include="src\inout\FileWriter.cpp" />
-    <ClCompile Include="src\inout\SimpleWriter.cpp" />
     <ClCompile Include="src\kernel\Boundary.cpp" />
     <ClCompile Include="src\kernel\Cell.cpp" />
     <ClCompile Include="src\kernel\DiagramHandler.cpp" />
@@ -152,6 +153,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\common\Extension.h" />
+    <ClInclude Include="src\common\PathHandler.h" />
     <ClInclude Include="src\common\Singleton.h" />
     <ClInclude Include="src\debug\DebugOutput.h" />
     <ClInclude Include="src\events\Event.h" />
@@ -164,7 +166,6 @@
     <ClInclude Include="src\inout\FileReader.h" />
     <ClInclude Include="src\inout\FileWriter.h" />
     <ClInclude Include="src\inout\Reader.h" />
-    <ClInclude Include="src\inout\SimpleWriter.h" />
     <ClInclude Include="src\inout\Writer.h" />
     <ClInclude Include="src\kernel\Boundary.h" />
     <ClInclude Include="src\kernel\Cell.h" />

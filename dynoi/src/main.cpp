@@ -1,5 +1,6 @@
 #include <iostream>
 #include <memory>
+#include <filesystem>
 
 #include "kernel/Vector2D.h"
 #include "kernel/Site.h"
@@ -10,9 +11,11 @@
 #include "kernel/VoronoiDiagram.h"
 #include "generators/IncrementalGenerationAlgorithm.h"
 #include "inout/Writer.h"
-#include "inout/SimpleWriter.h"
 #include "inout/FileReader.h"
 #include "common/Extension.h"
+#include "common/PathHandler.h"
+
+#include "debug/DebugOutput.h"
 
 // ?? todo:
 // 1) create class that will be incapsulate adding and deleting elements to the diagram.
@@ -64,7 +67,7 @@ void processPointsFromFile(const std::string& points, Container& cont)
 
 static void readBoundary(const std::string& projectPath, std::list<Vector2D>& boundaryPoints)
 {
-	FileReader reader(projectPath + GetExtensionString(Extension::Boundary));
+	FileReader reader(projectPath + getExtensionString(Extension::Boundary));
 	const std::string& pointsFromFile = reader.read();
 	
 	processPointsFromFile(pointsFromFile, boundaryPoints);
@@ -72,7 +75,7 @@ static void readBoundary(const std::string& projectPath, std::list<Vector2D>& bo
 
 static void readSites(const std::string& projectPath, std::vector<Site>& sites)
 {
-	FileReader reader(projectPath + GetExtensionString(Extension::Sites));
+	FileReader reader(projectPath + getExtensionString(Extension::Sites));
 	const std::string& sitesFromFile = reader.read();
 	
 	processPointsFromFile(sitesFromFile, sites);
@@ -93,8 +96,8 @@ int main(int argc, const char** argv)
 		std::vector<Site> sites;
 		readSites(projectPath, sites);
 
-		// srand((unsigned int)time(0));
-		// sites = generateRandomSites(7, 0.1, 9.9, 0.1, 9.9);
+		//srand((unsigned int)time(0));
+		//sites = generateRandomSites(7, 0.1, 9.9, 0.1, 9.9);
 
 		Generator generator(std::make_shared<IncrementalGenerationAlgorithm>());
 
@@ -105,23 +108,13 @@ int main(int argc, const char** argv)
 		std::cout << ex.what() << std::endl;
 	}
 
-	// output section for test (should be deleted in the future)
-	int num = 0;
-	for (auto& cell : vd->cells())
+	DebugOutput::outputCellsDataToConsole(vd);
+	if (PathHandler::hasParentPath(projectPath))
 	{
-		std::cout << "\nCell number = " << num++ << "\n";
-		std::cout << "Site = " << cell->site().coord().x() << " " << cell->site().coord().y() << "\n";
-		std::cout << "Number of edges = " << cell->edges().size() << "\n";
-		for (auto& edge : cell->edges())
-		{
-			std::cout << "\t" << edge->center().x() << " " << edge->center().y() << "\n";
-		}
+		const std::string debugPath = std::format("{}\\dbg", PathHandler::parentPathAsString(projectPath));
+		DebugOutput::outputCellsCentersToTecplot(debugPath, vd);
+		DebugOutput::outputEdgesToTecplot(debugPath, vd);
 	}
-	// end output section
-
-	std::string fileName = "";
-	std::shared_ptr<Writer> writer = std::make_shared<SimpleWriter>(fileName, vd);
-	writer->write("");
 
 	return 0;
 }

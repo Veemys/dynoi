@@ -52,9 +52,6 @@
     <ClCompile Include="src\inout\FileWriter.cpp">
       <Filter>src\inout</Filter>
     </ClCompile>
-    <ClCompile Include="src\inout\SimpleWriter.cpp">
-      <Filter>src\inout</Filter>
-    </ClCompile>
     <ClCompile Include="src\mathem\Math.cpp">
       <Filter>src\mathem</Filter>
     </ClCompile>
@@ -90,6 +87,12 @@
     </ClCompile>
     <ClCompile Include="src\debug\DebugOutput.cpp">
       <Filter>src\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\PathHandler.cpp">
+      <Filter>src\common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\Extension.cpp">
+      <Filter>src\common</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -127,9 +130,6 @@
       <Filter>src\inout</Filter>
     </ClInclude>
     <ClInclude Include="src\inout\Reader.h">
-      <Filter>src\inout</Filter>
-    </ClInclude>
-    <ClInclude Include="src\inout\SimpleWriter.h">
       <Filter>src\inout</Filter>
     </ClInclude>
     <ClInclude Include="src\inout\Writer.h">
@@ -176,6 +176,9 @@
     </ClInclude>
     <ClInclude Include="src\debug\DebugOutput.h">
       <Filter>src\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\PathHandler.h">
+      <Filter>src\common</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
