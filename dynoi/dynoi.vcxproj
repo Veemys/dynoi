@@ -129,6 +129,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\debug\DebugOutput.cpp" />
     <ClCompile Include="src\generators\DegenerateHexaDiagramGenerationAlgorithm.cpp" />
     <ClCompile Include="src\generators\FortuneGenerationAlgorithm.cpp" />
     <ClCompile Include="src\generators\IncrementalGenerationAlgorithm.cpp" />
@@ -152,6 +153,7 @@
   <ItemGroup>
     <ClInclude Include="src\common\Extension.h" />
     <ClInclude Include="src\common\Singleton.h" />
+    <ClInclude Include="src\debug\DebugOutput.h" />
     <ClInclude Include="src\events\Event.h" />
     <ClInclude Include="src\events\EventHandler.h" />
     <ClInclude Include="src\events\MethodEventHandler.h" />

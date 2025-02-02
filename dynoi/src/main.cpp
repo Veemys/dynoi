@@ -18,12 +18,12 @@
 // 1) create class that will be incapsulate adding and deleting elements to the diagram.
 //    this class also will be provide convenient interface for these purposes
 
-double random(double min, double max)
+static double random(double min, double max)
 {
 	return (double)(rand()) / RAND_MAX * (max - min) + min;
 }
 
-std::vector<Site> generateRandomSites(int sitesNumber, double xMin, double xMax, double yMin, double yMax)
+static std::vector<Site> generateRandomSites(int sitesNumber, double xMin, double xMax, double yMin, double yMax)
 {
 	std::vector<Site> sites;
 	for (int i = 0; i < sitesNumber; ++i)
@@ -62,7 +62,7 @@ void processPointsFromFile(const std::string& points, Container& cont)
 	}
 }
 
-void readBoundary(const std::string& projectPath, std::list<Vector2D>& boundaryPoints)
+static void readBoundary(const std::string& projectPath, std::list<Vector2D>& boundaryPoints)
 {
 	FileReader reader(projectPath + GetExtensionString(Extension::Boundary));
 	const std::string& pointsFromFile = reader.read();
@@ -70,7 +70,7 @@ void readBoundary(const std::string& projectPath, std::list<Vector2D>& boundaryP
 	processPointsFromFile(pointsFromFile, boundaryPoints);
 }
 
-void readSites(const std::string& projectPath, std::vector<Site>& sites)
+static void readSites(const std::string& projectPath, std::vector<Site>& sites)
 {
 	FileReader reader(projectPath + GetExtensionString(Extension::Sites));
 	const std::string& sitesFromFile = reader.read();

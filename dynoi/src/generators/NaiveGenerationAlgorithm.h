@@ -2,7 +2,7 @@
 
 #include <memory>
 
-#include "../kernel/GenerationAlgorithm.h";
+#include "../kernel/GenerationAlgorithm.h"
 
 class Site;
 class VoronoiDiagram;

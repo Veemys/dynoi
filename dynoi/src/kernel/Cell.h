@@ -3,7 +3,7 @@
 #include <set>
 #include <memory>
 
-#include "Site.h";
+#include "Site.h"
 
 class Edge;
 

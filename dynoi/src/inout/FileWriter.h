@@ -2,7 +2,7 @@
 
 #include <fstream>
 
-#include "Writer.h";
+#include "Writer.h"
 
 class FileWriter : public Writer
 {
